@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#buttons-container{
+ height: 150px;
+
+  background-color: #222f3d;
+  align-items: center;
+ justify-content: space-evenly;
+  display: flex;
+
+
+}
+
+#side-container{
+ 
+
+justify-content: flex-start;
+align-content: flex-start;
+background-color: #222f3d;
+  align-items: center;
+ justify-content:space-around;
+  display: flex;
+  flex-direction:column;
+  width: 150px;
+  height: 600px
+  }
+
+
+.color-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.color-btn2{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+}
+#color1{
+    background-color: red;
+    
+}
+#color2{
+    background-color: blue;
+    
+}
+#color3{
+   background-color: green;
+   
+}
+#color4{
+    background-color: yellow;
+    
+}
+#color5{
+    background-color:brown;
+    
+}
+#color6{
+  background-color:black;
+  color: aliceblue;
+}
+#color7{
+  background-color: violet;
+}
+#color8{
+  background-color: orange;
+}
+#color9{
+  background-color: cyan;
+}
+#color10{
+  background-color: olive;
+} 
+#color11{ 
+  background-color: maroon;
+} 
+#color12{
+  background-color: pink}
+ #color13{
+  background-color: gray;
+  } 
+#color14{
+   background-color: khaki;
+} 
+#color15{
+  background-color:teal ;
+} 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  top: 0;
+  right: -250px;/* Initially hidden */
+  background-color: #333;
+  padding-top: 20px;
+  transition: right 0.3s ease; /* Smooth transition for open/close */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 120px;
+  justify-content: center;
+  flex-direction:column;
+  
+
+ 
+}
+
+.sidebar ul li {
+  padding: 10px;
+  
+  
+
+  
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.content {
+  padding: 20px;
+}
+
+.open-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.add-to-cart{
+  height: 40px;
+  width: 100px;
+background-color: rgb(0, 179, 255);
+color: aliceblue;
+}
+
+
+</style>
+<head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</html>
+
+</head>
+<body>
+    <html>
+
+
+    <div id="buttons-container">
+        <button class="color-btn" id="color1">color 1</button>
+        <button class="color-btn" id="color2">Color 2</button>
+        <button class="color-btn" id="color3">Color 3</button>
+        <button class="color-btn" id="color4">Color 4</button>
+        <button class="color-btn" id="color5"><i class="fa-solid fa-cart-shopping"></i>cart</button>
+    </div>
+    
+     
+        
+
+    <div<div id="side-container">
+      <a href="practice2.html"><button class="color-btn">Shirts</button></a>
+  
+        <button class="color-btn" id="color7">pants</button>
+        <button class="color-btn" id="color8">T-shirts</button>
+        <button class="color-btn" id="color9">Shorts</button>
+        <button class="color-btn" id="color10">lungis</button>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">Close</button>
+        <ul>
+          <div id="side-container">
+            <button class="color-btn" id="color11">Color 11</button>
+            <button class="color-btn" id="color12">Color 12</button>
+            <button class="color-btn" id="color13">Color 13</button>
+            <button class="color-btn" id="color14">Color 14</button>
+            <button class="color-btn" id="color15">Color 15</button>
+        </div>
+        </ul>
+      </div>
+      <div class="content">
+        <button class="open-btn" onclick="openSidebar()">Open</button>
+        
+      </div>
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+    
+</html>
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.color-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            changeColor(button.id);
+        });
+    });
+
+    function changeColor(colorId) {
+        const colorMap = {
+            color1: 'red',
+            color2: 'blue',
+            color3: 'green',
+            color4: 'yellow',
+            color5: 'brown',
+            color6:  'black',
+            color7: 'violet',
+            color8: 'orange',
+            color9: 'cyan',
+            color10: 'olive',
+            color11: 'maroon',
+            color12: 'pink',
+            color13: 'grey',
+            color14: 'khaki',
+            color15: 'teal',
+
+        };
+
+        document.body.style.backgroundColor = colorMap[colorId];
+    }
+});
+function openSidebar() {
+  document.getElementById("sidebar").style.right = "0";
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").style.right = "-250px";
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItems = document.querySelector('.cart-items');
+    const totalDisplay = document.querySelector('.total');
+
+    let cart = [];
+    let total = 0;
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const product = event.target.parentElement;
+            const productName = product.querySelector('h2').innerText;
+            const productPrice = parseFloat(product.querySelector('p').innerText.split(':')[1]);
+
+            cart.push({ name: productName, price: productPrice });
+            renderCart();
+        });
+    });
+
+    function renderCart() {
+        cartItems.innerHTML = '';
+        total = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerText = `${item.name} - $${item.price}`;
+            cartItems.appendChild(listItem);
+            total += item.price;
+        });
+
+        totalDisplay.innerText = total.toFixed(2);
+    }
+});
+
+
+</script>
+
+    
+</body>
+</html>
